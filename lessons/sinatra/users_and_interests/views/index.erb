@@ -1,0 +1,8 @@
+<html>
+  <head><title>My Application</title></head>
+  <body>
+    <ul>
+      <%= @words.map { |word| "<li>#{word}</li>\n" }.join %>
+    </ul>
+  </body>
+</html>

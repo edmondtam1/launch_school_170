@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= @title %></title>
+    <link rel="stylesheet" href="stylesheets/pure-min.css">
+    <link rel="stylesheet" href="stylesheets/fonts.css">
+    <link rel="stylesheet" href="stylesheets/book_viewer.css">
+  </head>
+  <body>
+    <div id="layout">
+      <a href="#menu" id="menuLink" class="menu-link">
+        <span></span>
+      </a>
+      <div id="main">
+        <div class="files">
+          <% @files.each do |file| %>
+            <li class="file-item">
+              <a href="<%= file %>" class="file-link"><%= file %></a>
+            </li>
+          <% end %>
+        </div>
+        <p>
+          <% if params[:sort] == "desc" %>
+            <a href="/">Sort ascending</a>
+          <% else %>
+            <a href="/?sort=desc">Sort descending</a>
+          <% end %>
+        </p>
+      </div>
+    </div>
+    <script type="text/javascript" src="/javascripts/ui.js"></script>
+  </body>
+</html>
