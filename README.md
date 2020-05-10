@@ -1,4 +1,4 @@
-# Ruby networking exercises and content management system
+# Ruby networking and content management system
 
 This repository contains exercises related to networking with Ruby. Topics covered include:
 
